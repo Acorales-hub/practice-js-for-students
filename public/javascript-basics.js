@@ -11,7 +11,11 @@
 
     function codeStructure(){
         const csUrl = 'https://es.javascript.info/structure'
-
-
         open(csUrl, "test", params);
     }
+
+    function useStrict(){
+      const csUrl = 'https://es.javascript.info/strict-mode'
+      open(csUrl, "test", params);
+    }
+
