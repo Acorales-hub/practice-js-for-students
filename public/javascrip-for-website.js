@@ -1,4 +1,8 @@
 'use strict'
+//Global vars
+
+
+//Funtions
 
     function reloadwebsite(){//Reload the page
         location.reload()
