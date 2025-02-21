@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 5 Example</title>
+    <title>Learning JS</title>
     <meta name="description" content="Bootstrap 5 example">
     <meta name="author" content="CORALESoftware">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootsatrap Icons-->
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom CSS (Optional) -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid" onload="securityLinks()">
 
         <header class="row">
             <div class="col-md-12">
@@ -52,6 +54,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Others</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="#" class="btn bg-warning" onclick="reloadwebsite()">
+                                        <i class="bi bi-arrow-clockwise">Reload</i>
+                                    </a>
+                                </li>
                             </ul>
                             <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -67,19 +74,26 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-4">
-                        <span class="badge bg-secondary">Label</span>
+                        <span class="badge bg-secondary">Menu</span>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Collapsible Group Item #1
+                                        Javascript Basics
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Anim pariatur cliche...
+                                        <ul>
+                                            <li>
+                                                <a href="#" onclick="greet()">Hello world with the alert function</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="codeStructure()">Code Structure</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -99,13 +113,12 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-8">
                         <div class="p-5 mb-4 bg-light rounded-3">
-                            <div class="container-fluid py-5">
-                                <h1 class="display-5 fw-bold">Hello, world!</h1>
-                                <p class="col-md-8 fs-4">This is a template for a simple marketing or informational
-                                    website. It includes a large callout called the hero unit and three supporting
-                                    pieces of content. Use it as a starting point to create something more unique.</p>
+                            <div class="container-fluid py-5" id="show">
+                                <h1 class="display-5 fw-bold">Hello, coders!</h1>
+                                <p class="col-md-8 fs-4">This is a website to see what you learned about Javascript in classes.</p>
                                 <button class="btn btn-primary btn-lg" type="button">Learn more</button>
                             </div>
                         </div>
@@ -268,7 +281,9 @@
                 </table>
             </div>
         </footer>
-
+    <!--Script-->
+    <script src="public/javascrip-for-website.js"></script>
+    <script src="public/javascript-basics.js"></script>
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom scripts (Optional) -->
